@@ -9,6 +9,7 @@ import { ActividadesService } from '../servicios/actividades.service';
   styleUrl: './listado.component.scss'
 })
 export class ListadoComponent {
-  constructor(private actividades: ActividadesService) { }
-  listaActividades = this.actividades.lista;
+  listaActividades: any[];
+  constructor(private actividades: ActividadesService) { this.listaActividades = this.actividades.crearLista(); }
+
 }
